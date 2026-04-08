@@ -2,7 +2,7 @@
 
 A multi-stage Fake News Detection System that evaluates the authenticity of news articles using a structured compartment-based analysis approach. The system processes user-submitted content and provides a final verdict based on reliability, legitimacy, and trustworthiness.
 
-🚀 Features
+Features
 Stage 1: Quick Authenticity Filter
 Checks source credibility
 Evaluates content quality
@@ -56,18 +56,30 @@ Processing: Custom scoring algorithms
 
 📂 Project Structure
 ├── src/
+
 │   ├── components/
+
 │   ├── services/
+
 │   │   ├── stage1Service.ts
+
 │   │   ├── newsAnalysisService.ts
+
 │   ├── pages/
+
 │   └── utils/
+
 │
 ├── supabase/
+
 │   ├── functions/
+
 │   │   ├── stage1-filter/
+
 │   │   ├── verify-news/
+
 │
+
 └── README.md
 
 How It Works
