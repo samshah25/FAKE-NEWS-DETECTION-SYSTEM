@@ -1,55 +1,102 @@
-# Welcome to your project
+📰 Fake News Detection System
 
-## Project info
+A multi-stage Fake News Detection System that evaluates the authenticity of news articles using a structured compartment-based analysis approach. The system processes user-submitted content and provides a final verdict based on reliability, legitimacy, and trustworthiness.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🚀 Features
+🔍 Stage 1: Quick Authenticity Filter
+Checks source credibility
+Evaluates content quality
+Filters spam or low-quality inputs
+⚙️ Stage 2: Preprocessing & Data Extraction
+Extracts text, metadata, keywords
+Prepares content for deeper analysis
+📊 Compartment-Based Analysis
+C1 – Relatability
+Checks contextual relevance (location, time, plausibility)
+C2 – Legitimacy
+Compares with trusted sources
+Measures similarity and cross-references
+C3 – Trustworthiness
+Evaluates bias, factual consistency, and source reliability
+🧮 Score Calculation
 
-Follow these steps:
+Weighted scoring system:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Final Score = 
+0.55 × Legitimacy +
+0.30 × Relatability +
+0.15 × Trustworthiness
+🏁 Final Verdict
+VERIFIED
+SUSPICIOUS
+NEEDS REVIEW
+FAKE
+🧩 System Workflow
+User
+↓
+Stage 1: Input Collection
+↓
+Stage 2: Preprocessing
+↓
+Compartment 1 → Compartment 2 → Compartment 3
+↓
+Calculate Scores
+↓
+Display Results
+🛠️ Tech Stack
+Frontend: React + TypeScript
+Backend: Supabase (Edge Functions)
+APIs: News data integration (trusted sources)
+Processing: Custom scoring algorithms
+📂 Project Structure
+├── src/
+│   ├── components/
+│   ├── services/
+│   │   ├── stage1Service.ts
+│   │   ├── newsAnalysisService.ts
+│   ├── pages/
+│   └── utils/
+│
+├── supabase/
+│   ├── functions/
+│   │   ├── stage1-filter/
+│   │   ├── verify-news/
+│
+└── README.md
+⚙️ How It Works
+User submits news content (text or URL)
+Stage 1 filters low-quality or suspicious input
+Stage 2 processes and extracts key information
+Content is analyzed across three compartments
+Scores are calculated using weighted formulas
+Final verdict is generated and displayed
+📊 Example Output
+{
+  "relatabilityScore": 65,
+  "legitimacyScore": 78,
+  "trustworthinessScore": 40,
+  "finalScore": 68,
+  "verdict": "SUSPICIOUS"
+}
+🎯 Objectives
+Detect misleading or false information
+Provide explainable scoring instead of black-box results
+Improve reliability of news consumption
+Support users in critical evaluation of content
+🔮 Future Improvements
+Real-time fact-checking integration
+Advanced NLP-based contextual analysis
+User feedback learning system
+Dashboard for analytics and trends
+🤝 Contributing
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Contributions are welcome!
+Feel free to fork the repo and submit a pull request.
 
-# Step 3: Install the necessary dependencies.
-npm i
+📜 License
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+This project is licensed under the MIT License.
 
-**Edit a file directly in GitHub**
+👨‍💻 Author
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Developed as part of a project on Fake News Detection using Multi-Stage Analysis System
